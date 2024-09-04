@@ -19,7 +19,7 @@ import lombok.extern.log4j.Log4j2; //Log4j2 로거를 생성 코드 간단 로�
 @Log4j2
 public class TodoRepositoryTests {
 
-    @Autowired
+    @Autowired //주입
     private TodoRepository todoRepository;
     //데이터 생성
     @Test
@@ -46,7 +46,7 @@ public class TodoRepositoryTests {
 
         java.util.Optional<Todo> result = todoRepository.findById(tno);
 
-        Todo todo = result.orElseThrow();
+        Todo todo = result.orElseThrow(); //꺼내줘
 
         log.info(todo);
     }
@@ -77,7 +77,7 @@ public class TodoRepositoryTests {
 
     @Test
     public void testPaging() {
-
+        //페이지 번호가 0부터 시작
         //import org.springframwork.data.domain.Pageable;
 
         Pageable pageable = PageRequest.of(0,10, Sort.by("tno").descending());

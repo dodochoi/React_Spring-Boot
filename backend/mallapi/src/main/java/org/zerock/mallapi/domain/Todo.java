@@ -15,7 +15,7 @@ import lombok.*;
 public class Todo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//자동 생성
     private Long tno;
 
     private String title;
