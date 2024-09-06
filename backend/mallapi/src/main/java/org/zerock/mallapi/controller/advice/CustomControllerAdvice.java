@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 /**
  * CustomControllerAdvice
  */
+//페이지 예외 처리 코드
 @RestControllerAdvice
 public class CustomControllerAdvice {
 
